@@ -1,25 +1,34 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Public API
 
-* Ruby version
+## Table of Contents
+- [Description](#description)
+- [Dependencies](#dependencies)
+- [References](#references)
+- [App API](#app-api)
 
-* System dependencies
+## Features
 
-* Configuration
 
-* Database creation
+## Description
+An Avion activity.
 
-* Database initialization
+- Run `rails s`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Dependencies
+### Ruby Gems Run `bundle install` to install
 
-* Deployment instructions
+- [Ruby](https://www.ruby-lang.org/)
+- [Ruby on Rails](https://rubyonrails.org/)
+- [Net::HTTP](https://docs.ruby-lang.org/en/master/Net/HTTP.html)
 
-* ...
-# public-api
+## References
+- [BoredAPI](https://www.boredapi.com/)
+- [PotterDB](https://docs.potterdb.com/apis/rest)
+- [PunkAPI](https://punkapi.com/documentation/v2)
+- [AdviceSlip](https://api.adviceslip.com/)
+
+## App API
+-
