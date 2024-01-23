@@ -1,18 +1,18 @@
-require 'net/http'
 require 'json'
+require 'httparty'
 
 class RandomActivityApi
-  BASE_URL = 'https://www.boredapi.com/api'.freeze
+  include HTTParty
+  base_uri 'https://www.boredapi.com/api'
 
   def initialize(endpoint)
     @endpoint = endpoint
   end
 
   def call
-    uri = URI("#{BASE_URL}/#{@endpoint}")
-    response = Net::HTTP.get_response(uri)
+    response = self.class.get("/#{@endpoint}")
 
-    if response.is_a?(Net::HTTPSuccess)
+    if response.success?
       JSON.parse(response.body)
     else
       raise "API request failed with status code #{response.code}"

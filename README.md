@@ -20,13 +20,14 @@ This activity fetches different datas from different endpoints.
 Project Key: `11753e335ef52afc1d0a6c77e4d3da40`, copy to your master.key to run the project.
 
 - Run `rails s`
+- Run `rails test` for testing if endpoints are currently available
 
 ## Dependencies
 ### Ruby Gems Run `bundle install` to install
 
 - [Ruby](https://www.ruby-lang.org/)
 - [Ruby on Rails](https://rubyonrails.org/)
-- [Net::HTTP](https://docs.ruby-lang.org/en/master/Net/HTTP.html)
+- [HTTParty](https://rubygems.org/gems/httparty/versions/0.13.7?locale=en)
 
 ## References
 - [BoredAPI](https://www.boredapi.com/)
@@ -40,7 +41,7 @@ Project Key: `11753e335ef52afc1d0a6c77e4d3da40`, copy to your master.key to run 
 
 #### Base URL
 
-Base URL: URL: http://localhost:3000
+Base URL: http://localhost:3000
 
 ##### Generate a Random Advice
 ```
@@ -51,7 +52,7 @@ Endpoint: /advice
 ### Potter DB
 #### Base URL
 
-Base URL: URL: http://localhost:3000
+Base URL: http://localhost:3000
 
 ##### Generate List of Harry Potter Books
 ```
@@ -86,7 +87,7 @@ Endpoint: /hp_speels
 ### Punk API
 #### Base URL
 
-Base URL: URL: http://localhost:3000
+Base URL: http://localhost:3000
 
 ##### Generate List of Beers
 ```
@@ -97,7 +98,7 @@ Endpoint: /beers
 ### Advice API
 #### Base URL
 
-Base URL: URL: http://localhost:3000
+Base URL: http://localhost:3000
 
 ##### Generate a Random Advice
 ```

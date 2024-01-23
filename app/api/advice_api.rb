@@ -1,18 +1,18 @@
-require 'net/http'
+require 'httparty'
 require 'json'
 
 class AdviceApi
-  BASE_URL = 'https://api.adviceslip.com'.freeze
+  include HTTParty
+  base_uri 'https://api.adviceslip.com'.freeze
 
   def initialize(endpoint)
     @endpoint = endpoint
   end
 
   def call
-    uri = URI("#{BASE_URL}/#{@endpoint}")
-    response = Net::HTTP.get_response(uri)
+    response = self.class.get("/#{@endpoint}")
 
-    if response.is_a?(Net::HTTPSuccess)
+    if response.success?
       JSON.parse(response.body)
     else
       raise "API request failed with status code #{response.code}"

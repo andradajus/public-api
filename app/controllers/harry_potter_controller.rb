@@ -1,4 +1,4 @@
-class HarryPotterController < ApplicationController
+class HarryPotterController < ActionController::API
   def books
     render json: HarryPotterApi.new('books').call
   end

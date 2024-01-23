@@ -1,18 +1,18 @@
-require 'net/http'
+require 'httparty'
 require 'json'
 
 class HarryPotterApi
-  BASE_URL = 'https://api.potterdb.com/v1'.freeze
+  include HTTParty
+  base_uri 'https://api.potterdb.com/v1'
 
   def initialize(endpoint)
     @endpoint = endpoint
   end
 
   def call
-    uri = URI("#{BASE_URL}/#{@endpoint}")
-    response = Net::HTTP.get_response(uri)
+    response = self.class.get("/#{@endpoint}")
 
-    if response.is_a?(Net::HTTPSuccess)
+    if response.success?
       JSON.parse(response.body)
     else
       raise "API request failed with status code #{response.code}"
